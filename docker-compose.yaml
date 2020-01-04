@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  develop:
+    build: .
+    ports:
+      - 0.0.0.0:2222:22
+    tty: true
+    volumes:
+      - ${HOME}/.ssh:/host.ssh
+      - ${HOME}/vscode-server-projects:/projects
